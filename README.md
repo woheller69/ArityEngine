@@ -1,4 +1,4 @@
-"Arity" arithmetic engine.
+# "Arity" arithmetic engine
 
 ### Installation
 
