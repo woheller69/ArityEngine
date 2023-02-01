@@ -1,14 +1,27 @@
 "Arity" arithmetic engine.
 
-Where to Download
------------------
-```groovy
-dependencies {
-  compile 'com.xlythe:arity:2.1.7'
+### Installation
+
+Add the JitPack repository to your root build.gradle at the end of repositories:
+
+```gradle
+allprojects {
+  repositories {
+    ...
+    maven { url 'https://jitpack.io' }
+  }
 }
 ```
 
-License
+Add the library dependency to your build.gradle file.
+
+```gradle
+dependencies {
+    implementation 'com.github.woheller69:ArityEngine:-SNAPSHOT'
+}
+```
+
+### License
 -----------------
 
 Copyright (C) 2007-2009 Mihai Preda.
@@ -25,11 +38,3 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-Use
------------------
-
-```bash
-python build.py
-java -jar rel/arity-2.1.7.jar
-java -jar rel/arity-2.1.7.jar "1+2"
-```
