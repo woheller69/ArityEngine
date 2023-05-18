@@ -17,7 +17,7 @@ public class BigDecimalUtils {
         return new BigDecimal(String.valueOf(value));
     }
 
-    public static double substract(double a, double b) {
+    public static double subtract(double a, double b) {
         if (isSupported(a) && isSupported(b)) {
             return getBigDecimalFrom(a).subtract(getBigDecimalFrom(b)).doubleValue();
         }

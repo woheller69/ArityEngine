@@ -176,8 +176,8 @@ public class Complex {
    */
   public final Complex sub(Complex o) {
     final double ulp = Math.ulp(re);
-    re = BigDecimalUtils.substract(re, o.re);
-    im = BigDecimalUtils.substract(im, o.im);
+    re = BigDecimalUtils.subtract(re, o.re);
+    im = BigDecimalUtils.subtract(im, o.im);
     // hack for "1.1-1-.1"
     if (Math.abs(re) < ulp * 1024) {
       re = 0;
