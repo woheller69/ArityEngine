@@ -288,9 +288,9 @@ public class Symbols {
           "deg=0.017453292519943295", // PI/180
           "indeg=57.29577951308232", // 180/PI
 
-          "sind(x)=sin(mod(x,360) deg)",
-          "cosd(x)=cos(mod(x,360) deg)",
-          "tand(x)=tan(mod(x,360) deg)",
+          "sind(x)=sin(x deg)",
+          "cosd(x)=cos(x deg)",
+          "tand(x)=tan(x deg)",
 
           "asind(x)=asin(x) indeg",
           "acosd(x)=acos(x) indeg",

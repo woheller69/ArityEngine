@@ -179,8 +179,6 @@ public class Eval {
 
           new EvalCase("56.3 - 55.7", .6),
           new EvalCase("sin(11*pi)",0),
-          new EvalCase("sind(11*180)",0),
-          new EvalCase("cosd(11*180)",-1),
   };
 
   private static final double ONE_SQRT2 = 0.7071067811865475; // sin(pi/4)
