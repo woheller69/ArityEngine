@@ -178,6 +178,7 @@ public class Eval {
           new EvalCase("im(nan)", Double.NaN),
 
           new EvalCase("56.3 - 55.7", .6),
+          new EvalCase("sin(11*pi)",0),
   };
 
   private static final double ONE_SQRT2 = 0.7071067811865475; // sin(pi/4)

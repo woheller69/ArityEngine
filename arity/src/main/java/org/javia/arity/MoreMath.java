@@ -187,8 +187,9 @@ class MoreMath {
 
   private static boolean isPiMultiple(double x) {
     // x % y == 0
+    // d == Math.floor(d)
     final double d = x / Math.PI;
-    return d == Math.floor(d);
+    return x == Math.round(d)*Math.PI;
   }
 
   public static double sin(double x) {
