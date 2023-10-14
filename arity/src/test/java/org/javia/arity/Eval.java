@@ -179,7 +179,11 @@ public class Eval {
 
           new EvalCase("56.3 - 55.7", .6),
           new EvalCase("sin(11*pi)",0),
+          new EvalCase("sin(-2000*pi)",0),
+          new EvalCase("sin(1.5*pi)",-1),
+          new EvalCase("cos(9.5*pi)",0),
           new EvalCase("sind(11*180)",0),
+          new EvalCase("sind(2000*180)",0),
           new EvalCase("atanh(0.5)",0.5493061443340549),
           new EvalCase("100*atanh(2%^9)",5.12E-14),
   };

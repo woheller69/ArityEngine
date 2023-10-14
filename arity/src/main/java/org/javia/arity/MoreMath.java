@@ -193,19 +193,22 @@ class MoreMath {
   }
 
   private static boolean isPiMultiple(double x) {
-    // x % y == 0
-    // d == Math.floor(d)
-    double deg=0.017453292519943295; // PI/180
+    double epsilon = 8E-15; // max allowed deviation from PI multiple
     final double d = x / Math.PI;
-    return (x == Math.round(d)*Math.PI) || (x == Math.round(d)*180*deg);
+    double deg = 0.017453292519943295; // PI/180
+    return (Math.abs(Math.round(d)*Math.PI - x) < epsilon) || (Math.abs(Math.round(d)*180*deg - x) < epsilon);
   }
 
   public static double sin(double x) {
-    return isPiMultiple(x) ? 0 : Math.sin(x);
+    if (isPiMultiple(x)) return 0;
+    else if (isPiMultiple(x - Math.PI / 2)) return Math.round(Math.sin(x));
+    else return Math.sin(x);
   }
 
   public static double cos(double x) {
-    return isPiMultiple(x - Math.PI / 2) ? 0 : Math.cos(x);
+    if (isPiMultiple(x - Math.PI / 2)) return 0;
+    else if (isPiMultiple(x)) return Math.round(Math.cos(x));
+    else return Math.cos(x);
   }
 
   public static double tan(double x) {
@@ -213,7 +216,7 @@ class MoreMath {
   }
 
   public static int intLog10(double x) {
-    //an alternative implem is using a for loop.
+    //an alternative implementation is using a for loop.
     return (int) Math.floor(Math.log10(x));
   }
 
